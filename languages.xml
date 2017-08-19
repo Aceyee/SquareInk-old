@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <title>
+    <en>Hello</en>
+    <cn>你好</cn>
+    <fr>Bonjour</fr>
+  </title>
+  <text>
+    <en>English text</en>
+    <cn>中文文本</cn>
+    <fr>Frencis</fr>
+  </text>
+</root>
+
+<?php
+    $lang = $_GET['lang'];
+    $langArray = array('en', 'cn', 'fr');
+    $found = false;
+
+    if(in_array($lang, $langArray))
+        $found = true;
+
+    $xml = simplexml_load_file("languages.xml") or die("xml not found");
+    $title = $xml->title->$lang;
+    $text = $xml->text->$lang;
+?>
+
+<h1>
+  <?php echo $title;?>
+</h1>
+
+<h1>
+  <?php echo $text;?>
+</h1>
+
+<div style="margin-top:50px">
+  Languages:
+  <a href="?lang=en">en</a>
+  <a href="?lang=cn">cn</a>
+  <a href="?lang=fr">fr</a>
+</div>
