@@ -10,6 +10,20 @@
     <cn>中文文本</cn>
     <fr>Frencis</fr>
   </text>
+  <h1>
+    <?php echo $title;?>
+  </h1>
+
+  <h1>
+    <?php echo $text;?>
+  </h1>
+
+  <div style="margin-top:50px">
+    Languages:
+    <a href="?lang=en">en</a>
+    <a href="?lang=cn">cn</a>
+    <a href="?lang=fr">fr</a>
+  </div>
 </root>
 
 <?php
@@ -24,18 +38,3 @@
     $title = $xml->title->$lang;
     $text = $xml->text->$lang;
 ?>
-
-<h1>
-  <?php echo $title;?>
-</h1>
-
-<h1>
-  <?php echo $text;?>
-</h1>
-
-<div style="margin-top:50px">
-  Languages:
-  <a href="?lang=en">en</a>
-  <a href="?lang=cn">cn</a>
-  <a href="?lang=fr">fr</a>
-</div>

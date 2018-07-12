@@ -1,4 +1,4 @@
-﻿<?php
+<?php
      $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 4);
     if (preg_match("/zh-c/i", $lang)){
         require("./zh/nav.htm"); 
