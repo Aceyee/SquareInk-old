@@ -21,6 +21,9 @@
     width:90%;
 }
 
+.carousel-inner{
+    overflow:hidden;
+}
 
 
 
