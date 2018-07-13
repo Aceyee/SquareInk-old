@@ -42,10 +42,14 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <div id="footbar" class="footer">
+    </div>
 </body>
 <script>
     $(function(){
         $('#navbar-holder').load('nav.html');
+        $('#footbar').load('footer.html');
         var marginBot = parseInt($('#navbar-holder').css('marginBottom'));
         $('.d-block').css('height', $(window).height() - marginBot + "px");
         var width1 = $(window).width();
