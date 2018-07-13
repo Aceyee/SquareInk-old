@@ -20,8 +20,8 @@
             <li data-target="#carouselIndicators" data-slide-to="1"></li>
             <li data-target="#carouselIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="">
-            <div class="carousel-inner">
+        <div class="" >
+            <div class="carousel-inner" >
                 <div class="carousel-item active">
                     <img class="d-block" src="/image/first.svg" alt="First slide">
                 </div>
@@ -52,20 +52,24 @@
         var width2 = $('.d-block').width();
         var width = (width1 - width2)/2;
         //alert(width);
-        $('.carousel-item').css('marginLeft', width + "px");
-        $('.carousel-item').css('marginRight', width + "px");
+        //$('.carousel-item').css('marginLeft', width + "px");
+        //$('.carousel-item').css('marginRight', width + "px");
     });
 
     $(window).resize(function () {
         var marginBot = parseInt($('#navbar-holder').css('marginBottom'));
         $('.d-block').css('height', $(window).height() - marginBot + "px");
 
+        /*
         var width1 = $(window).width();
         var width2 = $('.d-block').width();
         var width = (width1 - width2) / 2;
+        if (width > 0) {
 
-        //alert(width);
-        $('.carousel-item').css('marginLeft', width + "px");
-        $('.carousel-item').css('marginRight', width + "px");
+            //alert(width);
+            $('.carousel-item').css('marginLeft', width + "px");
+            $('.carousel-item').css('marginRight', width + "px");
+        }
+        */
     });
     </script>

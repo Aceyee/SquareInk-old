@@ -21,8 +21,9 @@
     width:90%;
 }
 
-.carousel-inner{
-    overflow:hidden;
+.d-block{
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 
