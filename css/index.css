@@ -34,6 +34,16 @@ body{
     bottom:2rem;
 }
 
+#content{
+    width:1000px;
+    margin:0 auto;
+    background-color:white;
+}
+
+#paragraghs{
+    margin:1rem;
+}
+
 .footer {
    position: fixed;
    left: 0;
