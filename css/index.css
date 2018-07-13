@@ -2,6 +2,7 @@ body{
     background-color:gray;
 }
 
+
 .navbar{
     padding-top:0;
     padding-bottom:0;
@@ -42,6 +43,14 @@ body{
 
 #paragraghs{
     margin:1rem;
+}
+
+#btn-send{
+    position: absolute;
+    bottom:10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align:center;
 }
 
 .footer {
