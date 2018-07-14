@@ -6,7 +6,7 @@ require "init3.php";
     $response = array();
     if(mysqli_num_rows($result_message)>0){
         while($row = mysqli_fetch_array($result_message)){
-            array_push($response, array("username"=>$row["username"], "message"=>$row["message"]));
+            array_push($response, array("username"=>$row["username"], "message"=>$row["message"],"date"=>$row["date"]));
         }
         echo json_encode(array("Message"=>$response));
     }else{
