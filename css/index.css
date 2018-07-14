@@ -90,7 +90,6 @@ body{
 
 @media (max-width: 575.98px){
     #navbar-holder{
-        margin-bottom:40px;
     }
     .navbar-brand {
       font-size:1.5rem;
@@ -120,12 +119,14 @@ body{
         padding-left:0;
         padding-right:0;
     }
+    .footer p{
+        font-size:0.875rem;
+    }
 }
 
 
 @media (min-width: 576px) and (max-width: 767.98px){
     #navbar-holder{
-        margin-bottom:40px;
     }
     .navbar-brand {
       font-size:1.5rem;
@@ -134,7 +135,6 @@ body{
         width:3rem;
     }
     .btn-nav{
-      font-size:0.875rem;
     }
     .float-left{
         width:15%;
@@ -145,7 +145,6 @@ body{
 }
 @media (min-width: 768px) and (max-width: 991.98px){
     #navbar-holder{
-        margin-bottom:40px;
     }
     .navbar-brand {
       font-size:1.5rem;
@@ -159,7 +158,6 @@ body{
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
     #navbar-holder{
-        margin-bottom:54px;
     }
     .navbar-brand {
       font-size: 1rem;
@@ -173,7 +171,6 @@ body{
 }
 @media (min-width: 1200px) {
     #navbar-holder{
-        margin-bottom:63px;
     }
     .navbar-brand {
         font-size:1.375rem;
