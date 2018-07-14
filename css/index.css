@@ -35,14 +35,18 @@ body{
     bottom:2rem;
 }
 
-#content{
-    width:1000px;
+.content{
+    left:10%;
+    width:80%;
+    right:10%;
     margin:0 auto;
     background-color:white;
 }
 
 #paragraghs{
+    width:50%;
     margin:1rem;
+
 }
 
 #btn-send{
@@ -62,6 +66,9 @@ body{
    color: white;
 }
 
+.footer p{
+    margin:0;
+}
 
 
 
@@ -77,6 +84,15 @@ body{
     }
     .btn-nav{
       font-size:0.875rem;
+    }
+    .content{
+        left:0;
+        width:100%;
+        right:0;
+    }
+    #paragraghs{
+        width:100%;
+        margin:0;
     }
     .float-left{
         width:25%;

@@ -8,6 +8,6 @@
     if(!$con){
         echo "connection error ".mysqli_connect_error();
     }else{
-        echo "<h3>Database connection Success<\h3>";
+        //echo "<h3>Database connection Success<\h3>";
     }
 ?>
