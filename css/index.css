@@ -2,19 +2,22 @@ body{
     background-image:url("/image/bg-wood.jpg");
 }
 
-
 .navbar{
     padding-top:0;
     padding-bottom:0;
     background-color:rgba(0, 0, 0, 0.2);
+
 }
 
 .navbar a{
     font-weight:bold;
     color:white;    
 }
+.navbar .btn{
+    padding:0;
+}
 .navbar-expand-lg .navbar-nav .nav-link{
-    padding:0 0.5rem;
+    padding:0.5rem;
 }
 
 .navbar-brand{
