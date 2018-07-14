@@ -67,12 +67,11 @@ body{
     margin:0 auto;
     background-color:white;
 }
-
-#paragraghs{
+/*#paragraghs{
     width:50%;
     margin:1rem;
+}*/
 
-}
 
 #btn-send{
     position: absolute;

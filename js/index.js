@@ -1,11 +1,32 @@
+var height; //global variale for navbar height
+
 var all = {
+    /*
+        For all webpage to load componet like nav and footer
+    */
     onCreate: function () {
         $("#navbar-holder").load("nav.html");
         $('#footbar').load('footer.html');
-        var marginBot = parseInt($('#navbar-holder').css('marginBottom'));
-        $('.content').css('height', $(window).height() - marginBot + "px");
     }
-}
+};
+
+var nav = {
+    /*
+        After all webpages set, set component features.
+    */
+    onCreate: function () {
+        height = $("#navigation").height();
+        $("#navbar-holder").css('height', height);
+    },
+
+    onUpdate: function () {
+        $(window).resize(function () {
+            height = $("#navigation").height();
+            //alert(height);
+            $("#navbar-holder").css('height', height);
+        });
+    }
+};
 
 var message = {
     onCreate: function () {
@@ -43,6 +64,7 @@ var message = {
         });
     }
 }
+
 
 /*
 $(window).resize(function () {
