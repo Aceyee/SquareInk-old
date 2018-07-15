@@ -15,11 +15,14 @@
 
 <body>
     <div id="navbar-holder"></div>
-    <div class="content">
-        <h1>Message </h1>
-        <div id="message">
 
+    <div class="content" data-spy="scroll" data-target="#message" data-offset="0">
+        <div id="corkboard">
+            <div id="message">
+            
+            </div>
         </div>
+
         <div id="btn-send">
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
@@ -33,7 +36,7 @@
                 </div>
             </div>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Send a Message
+                Leave a Message
             </button>
         </div>
     </div>
@@ -43,4 +46,5 @@
 <script>
     all.onCreate();
     message.onCreate();
+    all.onUpdate();
 </script>

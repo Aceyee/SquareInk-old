@@ -1,4 +1,6 @@
-var height; //global variale for navbar height
+var navHeight; //global variale for navbar height
+var footHeight;//global variale for footer height
+
 
 var all = {
     /*
@@ -7,6 +9,15 @@ var all = {
     onCreate: function () {
         $("#navbar-holder").load("nav.html");
         $('#footbar').load('footer.html');
+        $(".content").css('height', $(window).height() * 3 / 4);
+    },
+
+    onUpdate: function () {
+        $(window).resize(function () {
+            $(".content").css('height', $(window).height() * 3 / 4);
+            $(".content").css('marginTop', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
+            $(".content").css('marginBottom', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
+        });
     }
 };
 
@@ -15,15 +26,32 @@ var nav = {
         After all webpages set, set component features.
     */
     onCreate: function () {
-        height = $("#navigation").height();
-        $("#navbar-holder").css('height', height);
+        navHeight = $("#navigation").height();
+        $("#navbar-holder").css('height', navHeight);
+        //$("#navbar-holder").css('marginBottom', navHeight);
     },
 
     onUpdate: function () {
         $(window).resize(function () {
-            height = $("#navigation").height();
-            //alert(height);
-            $("#navbar-holder").css('height', height);
+            navHeight = $("#navigation").height();
+            $("#navbar-holder").css('height', navHeight);
+        });
+    }
+};
+
+var foot = {
+    /*
+        After all webpages set, set component features.
+    */
+    onCreate: function () {
+        footHeight = $("#footbar").height();
+        $(".content").css('marginTop', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+        $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+    },
+
+    onUpdate: function () {
+        $(window).resize(function () {
+            footHeight = $("#footbar").height();
         });
     }
 };
@@ -31,7 +59,7 @@ var nav = {
 var message = {
     onCreate: function () {
         message.loadMessage();
-        message.setStayonPage();
+        message.setStayOnPage();
     },
 
     loadMessage:function(){
@@ -40,19 +68,40 @@ var message = {
             url: '/php/load.php',
             dataType: 'json',
             success: function (data) {
-                //alert(data.Message[0].username);
                 $.each(data.Message, function (index, user) {
+                    $('#message').append('<div class="card border-primary mb-3" style="max-width: 18rem;">'
+                        + '<div class="card-header">'
+                        +   '<div class="float-left">' + user.username + '</div>'
+                        +   '<div class="float-right">' + user.date + '</div>'
+                        +'</div>'
+                        +'<div class="card-body text-primary">'
+                        +   '<p class="card-text">'+user.message+'</p>'
+                        +'</div>'
+                    +'</div>');
                     //alert(data.Message[i].username);
                     //alert(user.username + "\n" + user.message);
+                    /*
                     $('#message').append($('<div>', {
                         text: user.username + " " + user.date + " " + user.message
                     }));
+                    
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    <div class="float-left">Header</div>
+                    <div class="float-right">Date</div>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+                    */
                 });
             }
         });
     },
 
-    setStayonPage: function () {
+    setStayOnPage: function () {
         $(document).ready(function () {
             var $form = $('form');
             $form.submit(function () {

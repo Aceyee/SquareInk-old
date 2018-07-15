@@ -44,10 +44,17 @@ body{
   border-color: #0062cc;
 }
 
-.float-left{
+#corkboard{
+    background-image:url("/image/bg-corkboard.jpg");
+    border-style:solid;
+    border-color:rgb(155, 155, 155);
+    border-width: 5px;
+}
+
+.list-group .float-left{
     width:10%;
 }
-.float-right{
+.list-group .float-right{
     width:90%;
 }
 
@@ -66,11 +73,9 @@ body{
     right:10%;
     margin:0 auto;
     background-color:white;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-/*#paragraghs{
-    width:50%;
-    margin:1rem;
-}*/
 
 
 #btn-send{
@@ -117,10 +122,10 @@ body{
         width:100%;
         margin:0;
     }
-    .float-left{
+    .list-group .float-left{
         width:25%;
     }
-    .float-right{
+    .list-group .float-right{
         width:75%;
     }
     .list-group-item{
@@ -144,10 +149,10 @@ body{
     }
     .btn-nav{
     }
-    .float-left{
+    .list-group .float-left{
         width:15%;
 }
-    .float-right{
+    .list-group .float-right{
         width:85%;
     }
 }
