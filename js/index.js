@@ -10,13 +10,19 @@ var all = {
         $("#navbar-holder").load("nav.html");
         $('#footbar').load('footer.html');
         $(".content").css('height', $(window).height() * 3 / 4);
+        //$(".content-mainpage").css('height', $(window).height() * 3 / 5);
+        $(".content-mainpage").css('height', 'auto');
     },
 
     onUpdate: function () {
         $(window).resize(function () {
             $(".content").css('height', $(window).height() * 3 / 4);
+            //$(".content-mainpage").css('height', $(window).height() * 3 / 5);
+            $(".content-mainpage").css('height', 'auto');
             $(".content").css('marginTop', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
-            $(".content").css('marginBottom', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
+            $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+            $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
+            $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
         });
     }
 };
@@ -47,6 +53,8 @@ var foot = {
         footHeight = $("#footbar").height();
         $(".content").css('marginTop', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
         $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+        $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
+        $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
     },
 
     onUpdate: function () {
