@@ -2,29 +2,43 @@ var navHeight; //global variale for navbar height
 var footHeight;//global variale for footer height
 
 
+$(window).ready(function () {
+    //all.onCreate();
+});
+
+
 var all = {
     /*
         For all webpage to load componet like nav and footer
     */
     onCreate: function () {
-        $("#navbar-holder").load("nav.html");
-        $('#footbar').load('footer.html');
+        var p = nav.onCreate();
+        var q = foot.onCreate()
+        $.when($.ajax(p), $.ajax(q)).then(function () {
+            all.initialize();
+        })
+    },
+
+    initialize: function () {
         $(".content").css('height', $(window).height() * 3 / 4);
-        //$(".content-mainpage").css('height', $(window).height() * 3 / 5);
+        $(".content").css('marginTop', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+        $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+
         $(".content-mainpage").css('height', 'auto');
+        $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
+        $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
     },
 
     onUpdate: function () {
         $(window).resize(function () {
             $(".content").css('height', $(window).height() * 3 / 4);
-            //$(".content-mainpage").css('height', $(window).height() * 3 / 5);
-            $(".content-mainpage").css('height', 'auto');
             $(".content").css('marginTop', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
             $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+            $(".content-mainpage").css('height', 'auto');   
             $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
             $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
         });
-    }
+    },
 };
 
 var nav = {
@@ -32,9 +46,13 @@ var nav = {
         After all webpages set, set component features.
     */
     onCreate: function () {
-        navHeight = $("#navigation").height();
-        $("#navbar-holder").css('height', navHeight);
-        //$("#navbar-holder").css('marginBottom', navHeight);
+        $("#navbar-holder").load("nav.html", function () {
+            navHeight = $("#navigation").height();
+            $("#navbar-holder").css('height', navHeight);
+            nav.setAnimation();
+            nav.onUpdate();
+        });
+
     },
 
     onUpdate: function () {
@@ -42,6 +60,25 @@ var nav = {
             navHeight = $("#navigation").height();
             $("#navbar-holder").css('height', navHeight);
         });
+    },
+
+    setAnimation:function(){
+        $('#myCollapsible').on('show.bs.collapse', function () {
+            $('#navigation').css('animation-name', 'example');
+            $('#navigation').css('animation-duration', '600ms');
+        })
+        $('#myCollapsible').on('hide.bs.collapse', function () {
+            $('#navigation').css('animation-name', 'example2');
+            $('#navigation').css('animation-duration', '600ms');
+        })
+
+        $('#myCollapsible').on('shown.bs.collapse', function () {
+            $('#navigation').css('background-color', 'rgba(0, 0, 0, 0.6)');
+        })
+
+        $('#myCollapsible').on('hidden.bs.collapse', function () {
+            $('#navigation').css('background-color', 'rgba(0, 0, 0, 0.2)');
+        })
     }
 };
 
@@ -50,11 +87,10 @@ var foot = {
         After all webpages set, set component features.
     */
     onCreate: function () {
-        footHeight = $("#footbar").height();
-        $(".content").css('marginTop', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
-        $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
-        $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
-        $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
+        $('#footbar').load('footer.html', function () {
+            footHeight = $("#footbar").height();
+            foot.onUpdate();
+        });
     },
 
     onUpdate: function () {
@@ -86,24 +122,6 @@ var message = {
                         +   '<p class="card-text">'+user.message+'</p>'
                         +'</div>'
                     +'</div>');
-                    //alert(data.Message[i].username);
-                    //alert(user.username + "\n" + user.message);
-                    /*
-                    $('#message').append($('<div>', {
-                        text: user.username + " " + user.date + " " + user.message
-                    }));
-                    
-                    <div class="card border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">
-                    <div class="float-left">Header</div>
-                    <div class="float-right">Date</div>
-                </div>
-
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-                    */
                 });
             }
         });
