@@ -20,6 +20,8 @@ var all = {
     },
 
     initialize: function () {
+        $("#bg").css("height", ($(window).height()));
+
         $(".content").css('height', $(window).height() * 3 / 4);
         $(".content").css('marginTop', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
         $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
@@ -31,9 +33,14 @@ var all = {
 
     onUpdate: function () {
         $(window).resize(function () {
+
+            $("#bg").css("height", ($(window).height()));
+            $("#bg").css("width", ($(window).width()));
+
             $(".content").css('height', $(window).height() * 3 / 4);
             $(".content").css('marginTop', ($(window).height()-$(".content").height()-navHeight-footHeight)/2);
             $(".content").css('marginBottom', ($(window).height() - $(".content").height() - navHeight - footHeight) / 2);
+
             $(".content-mainpage").css('height', 'auto');   
             $(".content-mainpage").css('marginTop', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
             $(".content-mainpage").css('marginBottom', ($(window).height() - $(".content").height() - $("h1").height() - navHeight - footHeight) / 2);
