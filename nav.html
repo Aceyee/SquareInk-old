@@ -25,23 +25,3 @@
             </ul>
         </div>
     </nav>
-    <script>
-        nav.onCreate();
-        nav.onUpdate();
-        $('#myCollapsible').on('show.bs.collapse', function () {
-            $('#navigation').css('animation-name', 'example');
-            $('#navigation').css('animation-duration', '600ms');
-        })
-        $('#myCollapsible').on('hide.bs.collapse', function () {
-            $('#navigation').css('animation-name', 'example2');
-            $('#navigation').css('animation-duration', '600ms');
-        })
-
-        $('#myCollapsible').on('shown.bs.collapse', function () {
-            $('#navigation').css('background-color', 'rgba(0, 0, 0, 0.6)');
-        })
-
-        $('#myCollapsible').on('hidden.bs.collapse', function () {
-            $('#navigation').css('background-color', 'rgba(0, 0, 0, 0.2)');
-        }) 
-    </script>

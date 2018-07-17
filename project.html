@@ -15,8 +15,27 @@
 
 <body>
     <div id="navbar-holder"></div>
+    <div id="bg-content">
+        <img src="./image/bg.jpg">
+    </div>
     <div class="content">
     <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="float-left text-center">
+                <img src="/image/icon-website.png" />
+                <div class="text-center">
+                    <abbr>Website</abbr>
+                </div>
+            </div>
+            <div class="float-right">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-0">Personal Website Studio</h5>
+                    <small>JUL 2018</small>
+                </div>
+                <p class="mb-0">Introduce myself and display my portfolio</p>
+            </div>
+        </a>
+
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="float-left text-center">
                 <img src="/image/icon-android.png" />
@@ -46,22 +65,6 @@
                     <small>MAR 2017</small>
                 </div>
                 <p class="mb-0">Make a prediction on whether a new movie would be in the top250 of IMDb</p>
-            </div>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="float-left text-center">
-                <img src="/image/icon-website.png" />
-                <div class="text-center">
-                    <abbr>Website</abbr>
-                </div>
-            </div>
-            <div class="float-right">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-0">Personal Website</h5>
-                    <small>JUL 2018</small>
-                </div>
-                <p class="mb-0">Introduce myself and display my portfolio</p>
             </div>
         </a>
 
@@ -103,4 +106,5 @@
 </html>
 <script>
     all.onCreate();
+    all.onUpdate();
 </script>
