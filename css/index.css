@@ -128,14 +128,20 @@
 
 .content-item{
     overflow-y:visible;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
     background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
 }
 
 .content-message{
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
     background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
 }
 
 .content-about{
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
     background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
     overflow-y:auto;
 }
