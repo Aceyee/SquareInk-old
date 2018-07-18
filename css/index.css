@@ -81,10 +81,12 @@
     display:block;
 }
 
-#corkboard{
-    /*background-image:url("/image/bg-corkboard.jpg");
-    */
-    background-color:white;
+
+#paragraghs{
+    margin-left:10%;
+    margin-right:10%;
+    width:80%;
+    /*background:linear-gradient(to right, #c4d7e6 0, #c4d7e6 33%, #66a5ad 33%, #66a5ad 66%, #ff0000 66%, #ff0000 100%);*/
 }
 
 .list-group .float-left{
@@ -115,12 +117,27 @@
     border-bottom-left-radius:0.75rem;
     border-top-right-radius:0.75rem;
     border-bottom-right-radius:0.75rem;
+
 }
 
 .content-mainpage{
     background-color:transparent;
     overflow:hidden;
     text-align:center;
+}
+
+.content-item{
+    overflow-y:visible;
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+}
+
+.content-message{
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+}
+
+.content-about{
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+    overflow-y:auto;
 }
 
 .card-img-top{
@@ -163,6 +180,14 @@
 
 .footer p{
     margin:0;
+}
+
+/*
+    self define
+*/
+.shift-middle{
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 

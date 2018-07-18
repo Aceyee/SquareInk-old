@@ -12,10 +12,12 @@ var all = {
         For all webpage to load componet like nav and footer
     */
     onCreate: function () {
-        var p = nav.onCreate();
-        var q = foot.onCreate()
-        $.when($.ajax(p), $.ajax(q)).then(function () {
-            all.initialize();
+        $.when($.ajax(nav.onCreate())).then(function () {
+            $.when($.ajax(foot.onCreate())).then(function () {
+                console.log(navHeight);
+                console.log(footHeight);
+                all.initialize();
+            })
         })
     },
 

@@ -20,7 +20,7 @@
     </div>
     <div class="content scrollbar-juicy-peach">
     <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="item-squareink.html" id="item1" name="squareink" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="float-left text-center">
                 <img src="/image/icon-website.png" />
                 <div class="text-center">
@@ -36,7 +36,7 @@
             </div>
         </a>
 
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="item-ssas.html" id="item2" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="float-left text-center">
                 <img src="/image/icon-android.png" />
                 <div class="text-center">
@@ -52,7 +52,7 @@
             </div>
         </a>
 
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="item-imdb.html" id="item3" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="float-left text-center">
                 <img src="/image/icon-machine-learning.png" />
                 <div class="text-center">
@@ -68,7 +68,23 @@
             </div>
         </a>
 
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a href="#" id="item5" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="float-left text-center">
+                <img src="/image/icon-sorting.png" />
+                <div class="text-center">
+                    <abbr>Sorting <br> Algorithm</abbr>
+                </div>
+            </div>
+            <div class="float-right">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-0">Sorting Algorithms Pool</h5>
+                    <small>JUL 2017</small>
+                </div>
+                <p class="mb-0">Summarize all algorithms learned from university courses</p>
+            </div>
+        </a>
+
+        <a href="#" id="item4" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="float-left text-center">
                 <img src="/image/icon-encryption.png" />
                 <div class="text-center">
@@ -83,22 +99,6 @@
                 <p class="mb-0">Implement AES encryption and decryption algorithms for security</p>
             </div>
         </a>
-
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="float-left text-center">
-                <img src="/image/icon-sorting.png" />
-                <div class="text-center">
-                    <abbr>Sorting <br> Algorithm</abbr>
-                </div>
-            </div>
-            <div class="float-right">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-0">Sorting Algorithms Pool</h5>
-                    <small>JUL 2017</small>
-                </div>
-                <p class="mb-0">Summarize all algorithms learned from Courses</p>
-            </div>
-        </a>
     </div>
     </div>
     <div id="footbar" class="footer"></div>
@@ -107,4 +107,32 @@
 <script>
     all.onCreate();
     all.onUpdate();
+    /*
+    $('.list-group-item').click(function () {
+        switch (this.name) {
+            case 'squareink':
+                // do something
+                //alert("1");
+                break;
+            case 'ssas':
+                alert("2");
+                // do something
+                break;
+            case 'imdb':
+                alert("3");
+                // do something
+                break;
+            case 'item4':
+                alert("4");
+                // do something
+                break;
+            case 'item5':
+                alert("5");
+                // do something
+                break;
+            default:
+                // do something
+                break;
+        }
+    });*/
 </script>
