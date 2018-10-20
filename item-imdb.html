@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zihan's Squareink Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/lib/css/bootstrap.css">
+    <script src="/lib/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="/lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' />
+</head>
+
+<body>
+    <div id="navbar-holder"></div>
+    
+    <div id="bg-content">
+        <img src="./image/bg.jpg">
+    </div>
+
+    <div class="content content-item">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="float-left text-center">
+                    <img src="/image/icon-machine-learning.png" />
+                </div>
+                <div class="float-right">
+                    <div class="justify-content-between">
+                        <h5 class="mb-0">IMDb Top 250 Prediction</h5>
+                    </div>
+                    <p class="mb-0">Make a prediction on whether a new movie would be in the top250 of IMDb</p>
+                </div>
+            </a>
+            </div>
+            <div>
+                <p>-	Completed this academic project with knowledge of data mining by three procedures: gather existing data, analyze the data, and predict the training data</p>
+                <p>-	Implemented a Python script to scrape user reviews from IMDb website: using Beautiful Soup module to look into the HTML component of the website, and then saving these reviews as txt files.</p>
+                <p>-    Analyzed the txt files and decided which words represents for positive (good movie) and for negative (bad movie).</p>
+                <p>-    Put the training data (a new movie) to predict whether it would be in the Top 250. The results proved that the accuracy was over 80%.</p>
+
+            </div>
+        </div>
+    <div id="footbar" class="footer">
+    </div>
+</body>
+</html>
+<script>
+    all.onCreate();
+    all.onUpdate();
+</script>

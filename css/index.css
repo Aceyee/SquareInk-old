@@ -56,6 +56,9 @@
   border-color: #0062cc;
 }
 
+
+
+/*Body*/
 #header{
     margin:8%;
 }
@@ -78,10 +81,12 @@
     display:block;
 }
 
-#corkboard{
-    /*background-image:url("/image/bg-corkboard.jpg");
-    */
-    background-color:white;
+
+#paragraghs{
+    margin-left:10%;
+    margin-right:10%;
+    width:80%;
+    /*background:linear-gradient(to right, #c4d7e6 0, #c4d7e6 33%, #66a5ad 33%, #66a5ad 66%, #ff0000 66%, #ff0000 100%);*/
 }
 
 .list-group .float-left{
@@ -108,12 +113,37 @@
     background-color:white;
     overflow-y: scroll;
     overflow-x: hidden;
+    border-top-left-radius:0.75rem;
+    border-bottom-left-radius:0.75rem;
+    border-top-right-radius:0.75rem;
+    border-bottom-right-radius:0.75rem;
+
 }
 
 .content-mainpage{
     background-color:transparent;
     overflow:hidden;
     text-align:center;
+}
+
+.content-item{
+    overflow-y:visible;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+}
+
+.content-message{
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+}
+
+.content-about{
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#94DECD));
+    background-image: -webkit-linear-gradient(left, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+    background-image: linear-gradient(to right, #ffecd2 0%, #eeeeee 50%, #94DECD 100%);
+    overflow-y:auto;
 }
 
 .card-img-top{
@@ -129,6 +159,22 @@
     text-align:center;
 }
 
+.scrollbar-juicy-peach::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.scrollbar-juicy-peach::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.scrollbar-juicy-peach::-webkit-scrollbar-thumb {
+  border-radius: 0.75rem;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffecd2), to(#fcb69f));
+  background-image: -webkit-linear-gradient(left, #ffecd2 0%, #fcb69f 100%);
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
+
+/*Footer*/
 .footer {
    position: fixed;
    left: 0;
@@ -140,6 +186,14 @@
 
 .footer p{
     margin:0;
+}
+
+/*
+    self define
+*/
+.shift-middle{
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 
